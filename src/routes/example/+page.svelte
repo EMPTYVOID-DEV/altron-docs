@@ -159,8 +159,8 @@ public class GFG {
 		<Altron
 			primaryColor={'#3164ff'}
 			secondaryColor={'#14c489'}
-			bgColor={'#ffffff'}
-			textColor={'#121212'}
+			bgColor={'#121212'}
+			textColor={'#ffffff'}
 			blocksGap={'10px'}
 			customCode={Code}
 			viewMode={true}

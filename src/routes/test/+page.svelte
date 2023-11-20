@@ -43,8 +43,8 @@
 			customCode={Code}
 			primaryColor={'#3164ff'}
 			secondaryColor={'#14c489'}
-			bgColor={'#ffffff'}
-			textColor={'#121212'}
+			bgColor={'#121212'}
+			textColor={'#ffffff'}
 			headerFont="'Montserrat', sans-serif"
 			bodyFont="'Source Sans 3', sans-serif"
 		/>

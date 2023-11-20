@@ -1,162 +1,143 @@
-<div class="home">
-	<nav class="navbar">
-		<span class="logo">Altron</span>
-		<div class="links">
-			<a href="https://github.com/Shinji13/Altron" target="_blank"
-				><i class="fa-brands fa-github" style="color: #3366ff;"></i></a
-			>
-			<a href="https://www.npmjs.com/package/@altron/altron" target="_blank"
-				><i class="fa-brands fa-npm" style="color: #3366ff;"></i></a
-			>
-		</div>
-	</nav>
-	<section class="description">
-		<h1>Power your apps with altron</h1>
-		<p>Rich text editing made easy with the help of svelte components</p>
-		<a href="https://github.com/Shinji13/Altron" target="_blank"><button>Get started now</button></a
-		>
-	</section>
-	<div class="body">
-		<h2>Feel free to take a tour</h2>
-		<section class="sections">
-			<span class="wrapper">
-				<a class="section" href="/test">
-					<span>Live-test</span>
+<script>
+	import TextWriting from '$lib/components/handlers/textWriting.svelte';
+	import Logo from '$lib/components/icons/logo.svelte';
+</script>
+
+<div class="homeWrapper">
+	<div class="home">
+		<nav class="navbar">
+			<Logo />
+			<div class="links">
+				<a target="_blank" href="https://github.com/Shinji13/Altron">
+					<i class="fa-brands fa-github" style="color: #ffffff;"></i>
 				</a>
-			</span>
-			<span class="wrapper">
-				<a class="section" href="/example">
-					<span>Example</span>
-				</a>
-			</span>
-			<span class="wrapper">
-				<a class="section" href="/docs">
-					<span>Docs</span>
-				</a>
-			</span>
+				<a target="_blank" href="https://www.npmjs.com/package/@altron/altron"
+					><i class="fa-brands fa-npm" style="color: #ffffff;"></i></a
+				>
+			</div>
+		</nav>
+		<section class="body">
+			<TextWriting text="Easy rich text editing with altron svelte component." />
+			<div class="sections">
+				<div class="sectionWrapper">
+					<a href="/example" class="section"> Example </a>
+				</div>
+				<div class="sectionWrapper">
+					<a href="/test" class="section">Live Test </a>
+				</div>
+				<div class="sectionWrapper">
+					<a href="/docs" class="section"> Docs </a>
+				</div>
+			</div>
 		</section>
 	</div>
 </div>
 
 <style>
-	.home {
+	.homeWrapper {
 		width: 100vw;
 		height: 100vh;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
-		padding-top: 10px;
-		gap: 10%;
+		justify-content: center;
+		background-color: var(--primary100);
+	}
+	.home {
+		width: 95%;
+		height: 95%;
+		display: flex;
+		flex-direction: column;
+		gap: 20%;
+		background-image: url('/altronBgMobile.png');
+		background-position: center;
+		background-size: cover;
+		border-radius: 12px;
+		padding-top: 20px;
+		padding-bottom: 40px;
 	}
 	.navbar {
 		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-inline: 30px;
+		padding-inline: 40px;
 	}
-	.navbar .logo {
-		font-family: 'Archivo', sans-serif;
-		font-size: var(--h3);
-		font-weight: bold;
-		color: var(--primary800);
-	}
-
 	.navbar .links {
 		display: flex;
 		align-items: center;
-		gap: 18px;
-	}
-
-	.navbar .links i {
-		font-size: 2.3rem;
-	}
-	.description {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 		gap: 20px;
 	}
-	.description h1 {
-		text-align: center;
-		font-family: 'Archivo', sans-serif;
-		font-size: var(--huge);
-	}
-	.description p {
-		color: color-mix(in srgb, gray 50%, var(--font) 30%);
-		font-weight: bold;
-		font-size: var(--h4);
-		text-align: center;
-	}
-	.description button {
-		cursor: pointer;
-		width: fit-content;
-		height: fit-content;
-		background-color: var(--primary800);
-		padding-inline: 24px;
-		padding-block: 16px;
-		border-radius: 6px;
-		font-weight: bold;
-		font-size: var(--body);
-		color: var(--bg);
-		outline: none;
-		border: none;
+	.links i {
+		font-size: 2.3rem;
 	}
 	.body {
 		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
+		display: grid;
+		grid-template-columns: 45% 45%;
+		gap: 5%;
+		padding-inline: 2.5%;
 	}
-	.sections {
+	.body .sections {
 		width: 100%;
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(2, auto);
 		align-items: center;
-		justify-content: center;
-		gap: 30px;
+		justify-items: center;
+		gap: 5%;
 	}
-	.sections .wrapper {
-		width: 8rem;
-		aspect-ratio: 1/1;
-		border-radius: 50%;
-		background-color: transparent;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.sections .wrapper {
-		border: 2px solid var(--primary800);
-	}
-
-	.sections .wrapper:hover .section {
-		background-color: color-mix(in srgb, var(--primary800) 60%, white 0%);
-	}
-
-	.sections .section {
-		width: 7rem;
+	.body .sectionWrapper {
 		aspect-ratio: 1/1;
 		border-radius: 50%;
 		display: flex;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
+	}
+	.section {
+		width: 80%;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
 		border: inherit;
-		cursor: pointer;
-	}
-	.sections .section span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-size: var(--h4);
-		text-transform: uppercase;
+		font-weight: bold;
+		background-color: color-mix(in srgb, var(--highlight) 15%, white 0%);
 	}
-	@media screen and (width <768px) {
-		.sections .section {
-			width: 5.5rem;
-		}
-		.sections .wrapper {
-			width: 6.5rem;
-		}
+
+	.sectionWrapper:nth-child(1) {
+		border: 2px solid var(--primary800);
+		--highlight: var(--primary800);
+		width: 9rem;
+	}
+	.sectionWrapper:nth-child(2) {
+		border: 2px solid var(--secondary800);
+		--highlight: var(--secondary800);
+		width: 10rem;
+	}
+	.sectionWrapper:nth-child(3) {
+		border: 2px solid var(--svelte);
+		--highlight: var(--svelte);
+		grid-column: span 2;
+		justify-self: center;
+		width: 11rem;
+	}
+
+	@media screen and (width < 768px) {
 		.home {
-			gap: 16%;
+			width: 100%;
+			height: 100%;
+			background-size: contain;
+			border-radius: 0;
+			gap: 15%;
+		}
+		.navbar {
+			padding-inline: 20px;
+		}
+		.body {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
 		}
 	}
 </style>

@@ -79,8 +79,7 @@ h4 {
 p,
 span,
 a,
-li,
-code {
+li {
 	font-family: 'Source Sans 3', sans-serif;
 	font-size: var(--body);
 	line-height: var(--lhbody);

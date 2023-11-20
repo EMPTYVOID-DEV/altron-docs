@@ -26,7 +26,7 @@
 					<a href="/test" class="section">Live Test </a>
 				</div>
 				<div class="sectionWrapper">
-					<a href="/docs" class="section"> Docs </a>
+					<a href="/docs/Altron/Introduction" class="section"> Docs </a>
 				</div>
 			</div>
 		</section>
@@ -105,6 +105,10 @@
 		background-color: color-mix(in srgb, var(--highlight) 15%, white 0%);
 	}
 
+	.section:hover {
+		filter: contrast(3);
+		background-color: color-mix(in srgb, var(--highlight) 35%, white 0%);
+	}
 	.sectionWrapper:nth-child(1) {
 		border: 2px solid var(--primary800);
 		--highlight: var(--primary800);

@@ -11,6 +11,9 @@ dependencies:
   svelte-highlight:
     specifier: ^7.4.1
     version: 7.4.1
+  sveltedocsmaker:
+    specifier: ^0.3.1
+    version: 0.3.1(svelte@4.2.5)
 
 devDependencies:
   '@sveltejs/adapter-auto':
@@ -491,6 +494,10 @@ packages:
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
     dev: true
+
+  /@types/marked@5.0.2:
+    resolution: {integrity: sha512-OucS4KMHhFzhz27KxmWg7J+kIYqyqoW5kdIEI319hqARQQUTqhao3M/F+uFnDXD0Rg72iDDZxZNxq5gvctmLlg==}
+    dev: false
 
   /@types/pug@2.0.9:
     resolution: {integrity: sha512-Yg4LkgFYvn1faISbDNWmcAC1XoDT8IoMUFspp5mnagKk+UvD2N0IWt5A7GRdMubsNWqgCLmrkf8rXkzNqb4szA==}
@@ -1336,6 +1343,12 @@ packages:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  /marked@5.1.2:
+    resolution: {integrity: sha512-ahRPGXJpjMjwSOlBoTMZAK7ATXkli5qCPxZ21TG44rx1KEo44bii4ekgTDQPNRQ4Kh7JMb9Ub1PVk1NxRSsorg==}
+    engines: {node: '>= 16'}
+    hasBin: true
+    dev: false
+
   /mdn-data@2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
 
@@ -1771,6 +1784,16 @@ packages:
       svelte: 4.2.5
     dev: true
 
+  /svelte-markdown@0.4.0(svelte@4.2.5):
+    resolution: {integrity: sha512-d8xYJoPhhiLn/tFrO54V5p22q2+I7It8w3CpTv+O+h99LlgehxK9XwdISVBl2aNcLbLX128Nz/vu7GScWhVZjw==}
+    peerDependencies:
+      svelte: ^4.0.0
+    dependencies:
+      '@types/marked': 5.0.2
+      marked: 5.1.2
+      svelte: 4.2.5
+    dev: false
+
   /svelte-preprocess@5.1.0(postcss@8.4.31)(svelte@4.2.5)(typescript@5.2.2):
     resolution: {integrity: sha512-EkErPiDzHAc0k2MF5m6vBNmRUh338h2myhinUw/xaqsLs7/ZvsgREiLGj03VrSzbY/TB5ZXgBOsKraFee5yceA==}
     engines: {node: '>= 14.10.0'}
@@ -1843,6 +1866,17 @@ packages:
       locate-character: 3.0.0
       magic-string: 0.30.5
       periscopic: 3.1.0
+
+  /sveltedocsmaker@0.3.1(svelte@4.2.5):
+    resolution: {integrity: sha512-U1n/nTqC+MKbPcbem2nojgHONuiNpXbEscZU+ZoRuqeVGVs2KILGC7YqiwS5xWYL8oCnycIxIqGAZzupSnT1rQ==}
+    engines: {node: '>=16.14'}
+    peerDependencies:
+      svelte: ^4.0.0
+    dependencies:
+      svelte: 4.2.5
+      svelte-highlight: 7.4.1
+      svelte-markdown: 0.4.0(svelte@4.2.5)
+    dev: false
 
   /text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}

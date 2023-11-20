@@ -20,19 +20,19 @@
 		<h2>Feel free to take a tour</h2>
 		<section class="sections">
 			<span class="wrapper">
-				<span class="section">
-					<a href="/test">Live-test</a>
-				</span>
+				<a class="section" href="/test">
+					<span>Live-test</span>
+				</a>
 			</span>
 			<span class="wrapper">
-				<span class="section">
-					<a href="/example">Example</a>
-				</span>
+				<a class="section" href="/example">
+					<span>Example</span>
+				</a>
 			</span>
 			<span class="wrapper">
-				<span class="section">
-					<a href="/docs">Docs</a>
-				</span>
+				<a class="section" href="/docs">
+					<span>Docs</span>
+				</a>
 			</span>
 		</section>
 	</div>
@@ -143,6 +143,8 @@
 		align-items: center;
 		border: inherit;
 		cursor: pointer;
+	}
+	.sections .section span {
 		font-size: var(--h4);
 		text-transform: uppercase;
 	}

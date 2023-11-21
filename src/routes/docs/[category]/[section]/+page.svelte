@@ -12,8 +12,8 @@
 	};
 
 	const sectionMap = new Map([
-		['Altron', ['Introduction', 'Getting started', 'Data structure', 'What next']],
-		['Usage', ['Customization', 'Utils', 'Events', 'Types', 'View mode', 'Notes']]
+		['Altron', ['Introduction', 'Data structure', 'Getting started', 'What next']],
+		['Usage', ['Customization', 'Utils', 'Events', 'Types', 'View mode', 'Notes', 'Props']]
 	]);
 </script>
 

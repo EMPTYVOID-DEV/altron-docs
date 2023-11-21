@@ -21,6 +21,7 @@ const config = {
 				'/docs/Usage/Customization',
 				'/docs/Usage/Utils',
 				'/docs/Usage/Events',
+				'/docs/Usage/Props',
 				'/docs/Usage/Types',
 				'/docs/Usage/View mode',
 				'/docs/Usage/Notes'

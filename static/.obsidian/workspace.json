@@ -1,0 +1,163 @@
+{
+  "main": {
+    "id": "e206c93340d15a85",
+    "type": "split",
+    "children": [
+      {
+        "id": "24cb4de42c2f8e20",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a2fe4dfd0191494e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Usage/Props.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "171829ac9e3021ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b3745a083a12adc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a83a05b38accaee2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7ae7871315b517eb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "593eb8e9307eb7e2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e17da4359bbc9cb4",
+    "type": "split",
+    "children": [
+      {
+        "id": "444e2aba6581299e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8667020da482291d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/Usage/Props.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "66becd15b65503ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/Usage/Props.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "68b0745a95ab7108",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ead0fed0c38b6228",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/Usage/Props.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "a2fe4dfd0191494e",
+  "lastOpenFiles": [
+    "docs/Usage/Customization.md",
+    "docs/Usage/Props.md",
+    "docs/Altron/Data structure.md",
+    "docs/Altron/Getting started.md",
+    "docs/Usage/Notes.md",
+    "docs/Usage/Types.md",
+    "docs/Usage/Utils.md",
+    "docs/Usage/View mode.md",
+    "docs/Usage/Events.md",
+    "docs/Altron/What next.md",
+    "docs/Altron/Introduction.md"
+  ]
+}

@@ -42,7 +42,7 @@
 		display: flex;
 		flex-direction: column;
 	}
-	#codeMdBlock > :global(:not(#lang)) {
+	#codeMdBlock :global(> :not(#lang)) {
 		width: 100%;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;

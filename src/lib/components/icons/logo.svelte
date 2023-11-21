@@ -1,8 +1,17 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+
 	export let mode: boolean = false;
 </script>
 
-<span class:light={mode}>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<span
+	on:click={() => {
+		goto('/');
+	}}
+	class:light={mode}
+>
 	<svg
 		width="150"
 		height="46"
@@ -235,6 +244,7 @@
 		display: flex;
 		align-items: center;
 		padding-left: 20px;
+		cursor: pointer;
 	}
 	.light :global(svg path) {
 		fill: var(--font);

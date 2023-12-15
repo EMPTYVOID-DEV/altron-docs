@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Usage/Props.md",
-                "mode": "source",
+                "file": "docs/Usage/Events.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Usage/Props.md",
+                "file": "docs/Usage/Events.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Usage/Props.md",
+                "file": "docs/Usage/Events.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Usage/Props.md"
+                "file": "docs/Usage/Events.md"
               }
             }
           }
@@ -148,16 +148,16 @@
   },
   "active": "a2fe4dfd0191494e",
   "lastOpenFiles": [
-    "docs/Usage/Customization.md",
     "docs/Usage/Props.md",
     "docs/Altron/Data structure.md",
     "docs/Altron/Getting started.md",
-    "docs/Usage/Notes.md",
-    "docs/Usage/Types.md",
-    "docs/Usage/Utils.md",
-    "docs/Usage/View mode.md",
+    "docs/Altron/Introduction.md",
+    "docs/Usage/Customization.md",
     "docs/Usage/Events.md",
-    "docs/Altron/What next.md",
-    "docs/Altron/Introduction.md"
+    "docs/Usage/Utils.md",
+    "docs/Usage/Types.md",
+    "docs/Usage/Notes.md",
+    "docs/Usage/View mode.md",
+    "docs/Altron/What next.md"
   ]
 }

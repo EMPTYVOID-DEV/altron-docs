@@ -17,9 +17,16 @@ Fired when a block is moved with **Block ID** and **up** attribute (boolean) i
 #### focusing
 
 Fired when a block gains focus with **Block ID**.
+
 #### editing
+
 Fired when a block is being edited with **Block ID**.
 
-#### losingFocus
-Fired when a block loses focus with null detail object.
+#### afterEditing
+
+Fired when we get out from the editing state for a block x. The detail object contains the id of x.
+
+#### blockUpdate 
+
+Fired for each update on the block's data .The detail object contains the id , previous data and the new data of the block.
 

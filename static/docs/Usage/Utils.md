@@ -26,7 +26,8 @@ import { onMount } from 'svelte';
 let editor: Altron = null; 
 // we are creating a variable to hold a reference to the AltronRichText component
 onMount(() => {
-    editor.setData([{ id: '12', name: 'header', data: { text: 'hello friend!', level: 1 } }]); // initialize the editor with a header
+    editor.setData([{ id: '12', name: 'header', data: { text: 'hello friend!', 
+             level: 1 } }]); // initialize the editor with a header
     const intervalId = setInterval(() => {
         const data = editor.getData()
         const workingBlock = editor.getWorkingBlock()

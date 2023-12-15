@@ -56,8 +56,8 @@ Each block is just an object with these properties:
 | paragraph              | { text: string }                       |
 | header   | { text: string; level: 1 \| 2 \| 3 \| 4 }          |
 | quote        | { text: string; owner: string } |
-| image         | { base64: string; name: string; caption: string }                              |
-| code         | { text: string; lang: languages }    |
+| image         | { file: File; caption: string }                              |
+| code         | { text: string; lang: string }    |
 | list       | { items: string[]; type: 'ordered' \| 'unordered' }                       |
 | checklist    |{ items: { value: string; checked: boolean }[] }                     |
 | attachment        | { file: File; title: string }                             |

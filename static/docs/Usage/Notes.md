@@ -18,4 +18,4 @@ When unwanted data has been added by the user **Altron** sets the default valu
 
 - **attachment** if the user didnt select a file or the selection does not meet the **attachmentTypes** altron will set the file to null.
 
-- same with **image** block base64 is empty string until a proper image get selected.
+- same with **image** block file is null until a proper image get selected.

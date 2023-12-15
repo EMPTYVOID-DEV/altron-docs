@@ -159,9 +159,9 @@ Here are all **Altron** props and their **Default** values:
 |---|---|
 |customEmbed|Accepts a **src** prop of **Type** **string** for the embedded view.|
 |customAttachment|Accepts a **file** prop of **Type** **File** and a **title** prop of **Type** **string**.|
-|customImage|Accepts **base64** (string), **name** (string), and **caption** (string) props.|
-|customCode|Accepts **text** (string) and **lang** (languages) props.|
-|customList|Accepts **items** (array of strings) and ****Type**** ('ordered' or 'unordered') props.|
+|customImage|Accepts **file** (File), and **caption** (string) props.|
+|customCode|Accepts **text** (string) and **lang** (string) props.|
+|customList|Accepts **items** (array of strings) and **Type** ('ordered' or 'unordered') props.|
 |customHeader|Accepts **text** (string) and **level** (1, 2, 3, or 4) props.|
 |customParagraph|Accepts a **text** prop of **Type** **string** for the paragraph view.|
 |customQuote|Accepts **text** (string) and **owner** (string) props.|

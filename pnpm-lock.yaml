@@ -1,13 +1,13 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: true
+  autoInstallPeers: false
   excludeLinksFromLockfile: false
 
 dependencies:
   '@altron/altron':
-    specifier: ^1.1.3
-    version: 1.1.3(svelte@4.2.5)
+    specifier: ^1.2.1
+    version: 1.2.1(svelte@4.2.5)
   svelte-highlight:
     specifier: ^7.4.1
     version: 7.4.1
@@ -48,7 +48,7 @@ devDependencies:
     version: 4.2.5
   svelte-check:
     specifier: ^3.6.0
-    version: 3.6.0(postcss@8.4.31)(svelte@4.2.5)
+    version: 3.6.0(svelte@4.2.5)
   tslib:
     specifier: ^2.4.1
     version: 2.6.2
@@ -66,8 +66,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@altron/altron@1.1.3(svelte@4.2.5):
-    resolution: {integrity: sha512-FfU+BaPZa/spXMHNFfAfZ6grs9sMYq+pB3V991FftooxrmbORBxFZUwAjCApA/DjW1Ky8StHXX7rM2by1RWVJw==}
+  /@altron/altron@1.2.1(svelte@4.2.5):
+    resolution: {integrity: sha512-vPqgPRnPr5X0uWu4nOuefOIn23GKx0FvvNHVps9MZwJnfZu1drtVa1eyGSMODrvhB+wCBsEb087uD8b92J7qlw==}
     engines: {node: '>=16.14'}
     peerDependencies:
       svelte: ^4.0.0
@@ -1718,7 +1718,7 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-check@3.6.0(postcss@8.4.31)(svelte@4.2.5):
+  /svelte-check@3.6.0(svelte@4.2.5):
     resolution: {integrity: sha512-8VfqhfuRJ1sKW+o8isH2kPi0RhjXH1nNsIbCFGyoUHG+ZxVxHYRKcb+S8eaL/1tyj3VGvWYx3Y5+oCUsJgnzcw==}
     hasBin: true
     peerDependencies:
@@ -1731,7 +1731,7 @@ packages:
       picocolors: 1.0.0
       sade: 1.8.1
       svelte: 4.2.5
-      svelte-preprocess: 5.1.0(postcss@8.4.31)(svelte@4.2.5)(typescript@5.2.2)
+      svelte-preprocess: 5.1.0(svelte@4.2.5)(typescript@5.2.2)
       typescript: 5.2.2
     transitivePeerDependencies:
       - '@babel/core'
@@ -1794,7 +1794,7 @@ packages:
       svelte: 4.2.5
     dev: false
 
-  /svelte-preprocess@5.1.0(postcss@8.4.31)(svelte@4.2.5)(typescript@5.2.2):
+  /svelte-preprocess@5.1.0(svelte@4.2.5)(typescript@5.2.2):
     resolution: {integrity: sha512-EkErPiDzHAc0k2MF5m6vBNmRUh338h2myhinUw/xaqsLs7/ZvsgREiLGj03VrSzbY/TB5ZXgBOsKraFee5yceA==}
     engines: {node: '>= 14.10.0'}
     requiresBuild: true
@@ -1835,7 +1835,6 @@ packages:
       '@types/pug': 2.0.9
       detect-indent: 6.1.0
       magic-string: 0.27.0
-      postcss: 8.4.31
       sorcery: 0.11.0
       strip-indent: 3.0.0
       svelte: 4.2.5

@@ -29,7 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@altron/altron": "^1.1.3",
+		"@altron/altron": "^1.2.1",
 		"svelte-highlight": "^7.4.1",
 		"sveltedocsmaker": "^0.4.2"
 	}

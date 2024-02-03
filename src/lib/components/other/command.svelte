@@ -38,7 +38,7 @@
 		transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 	}
 	.command :global(svg path) {
-		fill: var(--svelte);
+		fill: var(--svelte) !important;
 	}
 	.control {
 		display: flex;

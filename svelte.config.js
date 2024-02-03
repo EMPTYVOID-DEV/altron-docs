@@ -16,15 +16,15 @@ const config = {
 			entries: [
 				'/docs/Altron/Introduction',
 				'/docs/Altron/Getting started',
-				'/docs/Altron/Data structure',
+				'/docs/Altron/Altron cli',
+				'/docs/Altron/Components',
+				'/docs/Altron/Import methods',
 				'/docs/Altron/What next',
-				'/docs/Usage/Customization',
-				'/docs/Usage/Utils',
-				'/docs/Usage/Events',
 				'/docs/Usage/Props',
+				'/docs/Usage/Utils',
 				'/docs/Usage/Types',
-				'/docs/Usage/View mode',
-				'/docs/Usage/Notes'
+				'/docs/Usage/Events',
+				'/docs/Usage/Consts'
 			]
 		}
 	}

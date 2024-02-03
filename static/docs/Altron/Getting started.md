@@ -1,54 +1,33 @@
 # Getting started
 
-You have to use **Altron** inside a svelte project , if you haven't start one yet try one these setups:
+To use **altron** we need to follow the following steps.
 
-### Sveltekit setup
+### 1-Installing altron core package
 
-```Bash
-npx create-svelte@latest
+``` bash
+pnpm i @altron/altron
 ```
 
-### Astro setup
+### 2-Loading blocks dependencies with the cli
 
-```Bash
-npx create-astro@latest
+``` bash
+pnpm dlx @altron/altron-cli
 ```
 
-### create-split-app
+### 3-Importing the entry and componentMap
 
-[create-split-app](https://create-split-app.vercel.app) is a cli tool built to setup a project with most modern technologies **Sveltekit**, **Tailwind**, **Prisma**, **Lucia** , **Typescript** , **Zod** .
+The cli will create a map that links the component name with it svelte class.You need to import and pass it to **altron entry** as a prop.
 
-```Bash
-npx create-split-app@latest
-```
-
-### Installing Altron
-
-
-#### npm
-
-```Bash
-npm install @altron/altron@latest
-```
-
-#### yarn
-
-```Bash
-yarn add @altron/altron@latest
-```
-
-#### pnpm
-
-```Bash
-pnpm i @altron/altron@latest
-```
-
-### Basic usage
-
-``` Typescript
+``` Svelte
 <script>
-  import  {Altron}  from '@altron/altron';
+   import Altron from "@altron/altron/altron.svelte"
+   import { componentMap } from '$lib/components/altron/index';
 </script>
 
-<Altron />
+<Altron {componentMap} />
 ```
+
+
+
+
+

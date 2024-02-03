@@ -1,4 +1,3 @@
-
 # What next ?
 
 We looking in the near future to add some features that will enhance the end user and developer experience alike.
@@ -8,10 +7,8 @@ We looking in the near future to add some features that will enhance the end use
 - **Inline sub-block** are things that can embedded  inside a block like links  , warning , etc. 
 - **Inline actions** are operations that can be made to certain blocks of the editor. Examples of this is resizing images , positioning image, italic text , highlight text.
 
-### 2-Saving system
+### 2-Migrating to svelte 5
 
-At the moment **altron** export a function to get the editor's data (more on that [here](/docs/Usage/Utils)) but we are looking ahead to extend this system and provide a more straight forward approach to persist this data.
+**Svelte 5** will be out soon bringing with it runes which make building and consuming svelte packages much easier process.
 
-### 3-Package splitting altron
-
-The more blocks altron can support the bigger its size get. That why we trying to split each block logic to it own package and then developers can download only what they need.
+In particular the **prop** rune will remove a lot of pain when typing your package props.

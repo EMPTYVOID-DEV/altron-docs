@@ -1,147 +1,91 @@
 <script>
-	import TextWriting from '$lib/components/handlers/textWriting.svelte';
-	import Logo from '$lib/components/icons/logo.svelte';
+	import NavBar from '$lib/components/other/navBar.svelte';
+	import Command from '$lib/components/other/command.svelte';
 </script>
 
-<div class="homeWrapper">
-	<div class="home">
-		<nav class="navbar">
-			<Logo />
-			<div class="links">
-				<a target="_blank" href="https://github.com/Shinji13/Altron">
-					<i class="fa-brands fa-github" style="color: #ffffff;"></i>
-				</a>
-				<a target="_blank" href="https://www.npmjs.com/package/@altron/altron"
-					><i class="fa-brands fa-npm" style="color: #ffffff;"></i></a
-				>
-			</div>
-		</nav>
-		<section class="body">
-			<TextWriting text="Easy rich text editing with altron svelte component." />
-			<div class="sections">
-				<div class="sectionWrapper">
-					<a href="/example" class="section"> Example </a>
-				</div>
-				<div class="sectionWrapper">
-					<a href="/test" class="section">Live Test </a>
-				</div>
-				<div class="sectionWrapper">
-					<a href="/docs/Altron/Introduction" class="section"> Docs </a>
-				</div>
-			</div>
-		</section>
+<div class="home">
+	<NavBar />
+	<div class="body">
+		<h1>the block editor for svelte</h1>
+		<p>
+			Altron is a powerful block-based editor tailored for Svelte applications, offering effortless
+			creation, editing, and management of structured content. Empower your workflow with Altron's
+			robust features.
+		</p>
+		<div class="actions">
+			<button><a href="/test">Try altron</a></button>
+			<button><a href="/docs/Altron/Introduction">Documentation</a></button>
+		</div>
+		<Command command="pnpm install @altron/altron@latest" />
 	</div>
 </div>
 
 <style>
-	.homeWrapper {
+	.home {
 		width: 100vw;
 		height: 100vh;
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--primary100);
-	}
-	.home {
-		width: 95%;
-		height: 95%;
-		display: flex;
 		flex-direction: column;
-		gap: 20%;
-		background-image: url('/altronBgMobile.png');
-		background-position: center;
-		background-size: cover;
-		border-radius: 12px;
 		padding-top: 20px;
-		padding-bottom: 40px;
-	}
-	.navbar {
-		width: 100%;
-		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		padding-inline: 40px;
-	}
-	.navbar .links {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-	}
-	.links i {
-		font-size: 2.3rem;
+		gap: 20%;
 	}
 	.body {
-		width: 100%;
-		display: grid;
-		grid-template-columns: 45% 45%;
-		gap: 5%;
-		padding-inline: 2.5%;
-	}
-	.body .sections {
-		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(2, auto);
+		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-items: center;
-		gap: 5%;
+		justify-content: center;
+		gap: 30px;
 	}
-	.body .sectionWrapper {
-		aspect-ratio: 1/1;
-		border-radius: 50%;
+	.body h1 {
+		font-size: var(--huge);
+		text-transform: capitalize;
+		text-align: center;
+		color: var(--svelte);
+	}
+	.body p {
+		width: 70%;
+		text-align: center;
+		color: color-mix(in srgb, white 80%, transparent 0%);
+	}
+
+	.actions {
+		display: flex;
+		gap: 50px;
+	}
+	.actions button {
+		padding-inline: 25px;
+		padding-block: 8px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		border-radius: 6px;
+		cursor: pointer;
+		border: none;
+		outline: none;
 	}
-	.section {
-		width: 80%;
-		aspect-ratio: 1/1;
-		border-radius: 50%;
-		border: inherit;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	.actions button a {
 		font-size: var(--h4);
+		color: white;
 		font-weight: bold;
-		background-color: color-mix(in srgb, var(--highlight) 15%, white 0%);
+		text-transform: capitalize;
 	}
-
-	.section:hover {
-		filter: contrast(3);
-		background-color: color-mix(in srgb, var(--highlight) 35%, white 0%);
+	.actions button:first-of-type {
+		background-color: transparent;
+		border: 1px solid var(--primary800);
+		box-shadow: 4px 4px 4px var(--primary800);
 	}
-	.sectionWrapper:nth-child(1) {
-		border: 2px solid var(--primary800);
-		--highlight: var(--primary800);
-		width: 9rem;
+	.actions button:last-child {
+		background-color: transparent;
+		border: 1px solid white;
+		box-shadow: 4px 4px 4px white;
 	}
-	.sectionWrapper:nth-child(2) {
-		border: 2px solid var(--secondary800);
-		--highlight: var(--secondary800);
-		width: 10rem;
-	}
-	.sectionWrapper:nth-child(3) {
-		border: 2px solid var(--svelte);
-		--highlight: var(--svelte);
-		grid-column: span 2;
-		justify-self: center;
-		width: 11rem;
-	}
-
 	@media screen and (width < 768px) {
-		.home {
-			width: 100%;
-			height: 100%;
-			background-size: contain;
-			border-radius: 0;
-			gap: 15%;
+		.body h1 {
+			font-size: var(--h1);
 		}
-		.navbar {
-			padding-inline: 20px;
-		}
-		.body {
-			display: flex;
-			flex-direction: column;
-			gap: 40px;
+		.body p {
+			width: 90%;
 		}
 	}
 </style>

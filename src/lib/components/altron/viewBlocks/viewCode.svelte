@@ -1,18 +1,25 @@
-<script lang="ts">
+<script>
 	import { onedark } from 'svelte-highlight/styles';
-	import { HighlightAuto, LineNumbers } from 'svelte-highlight';
-	import CopyIcon from '../icons/copyIcon.svelte';
-	import DoneIcon from '../icons/doneIcon.svelte';
-	export let text: string;
-	export let lang: string;
-	let copyStatement: boolean = false;
-	async function copyCode(e: MouseEvent) {
+	import { HighlightAuto } from 'svelte-highlight';
+	import { getContext } from 'svelte';
+	/**
+	 * @type {string}
+	 */
+	export let text;
+	/**
+	 * @type {any}
+	 */
+	export let lang;
+	const componentMap = getContext('componentMap');
+	const DoneIcon = componentMap.get('doneIcon');
+	const CopyIcon = componentMap.get('copyIcon');
+	let copyStatement = false;
+	async function copyCode() {
 		navigator.clipboard.writeText(text);
 		copyStatement = true;
 		await new Promise((res) => setTimeout(res, 800));
 		copyStatement = false;
 	}
-	console.log('hello');
 </script>
 
 <svelte:head>
@@ -31,9 +38,7 @@
 		{/if}
 	</div>
 
-	<HighlightAuto code={text} let:highlighted>
-		<LineNumbers {highlighted} hideBorder wrapLines />
-	</HighlightAuto>
+	<HighlightAuto code={text}></HighlightAuto>
 </div>
 
 <style>

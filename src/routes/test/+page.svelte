@@ -1,24 +1,9 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { Altron } from '@altron/altron';
-	import type { Altron as altronType } from '@altron/altron';
-	import { onMount } from 'svelte';
-	import CloseIcon from '$lib/components/icons/closeIcon.svelte';
-	import Code from '$lib/components/handlers/code.svelte';
-	let editor: altronType = null;
-
-	onMount(() => {
-		editor.setData([
-			{
-				id: '2',
-				name: 'header',
-				data: {
-					level: 1,
-					text: 'Here You can Test the edit mode'
-				}
-			}
-		]);
-	});
+	import Altron from '@altron/altron/altron.svelte';
+	import { componentMap } from '$lib/components/altron/index';
+	import { exampleData } from '$lib/utils/consts';
+	import BackIcon from '$lib/components/other/backIcon.svelte';
 </script>
 
 <div class="example">
@@ -28,21 +13,31 @@
 		<span
 			on:click={() => {
 				goto('/');
-			}}><CloseIcon /></span
+			}}><BackIcon /></span
 		>
 	</header>
+
 	<section class="editor">
 		<Altron
-			bind:this={editor}
-			processEmbedSrcs={(src) => {
-				const a = src.split('/');
-				a.splice(a.length - 1, 0, 'embed');
-				return a.join('/').replace('watch?v=', '');
+			acceptedEmbedSrcs={{
+				description: 'The sources from youtube embeds are accepted.',
+				rules: ['^https://www.youtube.com/embed/[a-zA-Z0-9_-]{11}$']
 			}}
-			blocksGap={'10px'}
-			customCode={Code}
+			codeBlockLanguages={[
+				'c',
+				'javascript',
+				'svelte',
+				'typescript',
+				'csharp',
+				'python',
+				'php',
+				'lua'
+			]}
+			{componentMap}
+			intialData={exampleData}
 			primaryColor={'#3164ff'}
 			secondaryColor={'#14c489'}
+			blocksGap="20px"
 			bgColor={'#121212'}
 			textColor={'#ffffff'}
 			headerFont="'Montserrat', sans-serif"
@@ -80,7 +75,7 @@
 		fill: var(--primary800);
 	}
 	header span:hover {
-		background-color: var(--primary400);
+		background-color: var(--primary100);
 	}
 
 	.editor {

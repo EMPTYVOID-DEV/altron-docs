@@ -1,4 +1,3 @@
-
 # Types
 
 **Altron** uses well-defined types across all of its sub-components. Here they are:
@@ -19,7 +18,7 @@ type IframeSettings = {
 };  
 ```
 
-#### Blocks
+#### blocks
 
 Union type for the blocks names 
 
@@ -34,7 +33,7 @@ Already explained different blocks data
 
 ```Typescript
 type dataBlock =
-| { name: 'image'; id: string; data: { file:File ; caption: string } }
+| { name: 'image'; id: string; data: { file:File ; caption: string , src:string}}
 | { name: 'paragraph'; id: string; data: { text: string } }
 | { name: 'code'; id: string; data: { text: string; lang: string } }
 | { name: 'quote'; id: string; data: { text: string; owner: string } }
@@ -44,6 +43,8 @@ type dataBlock =
 		 'unordered' } }
 | { name: 'checklist'; id: string; data: { items: { value: string; checked: 
 		  boolean }[] } }
-| { name: 'attachment'; id: string; data: { file: File; title: string } }
+| { name: 'attachment'; id: string; data: { file: File; title: string ,  
+          size:number,src:string,type:string } }
 | { name: 'embed'; id: string; data: { src: string } };
 ```
+

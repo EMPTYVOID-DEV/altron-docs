@@ -1,10 +1,10 @@
 :root {
 	/* regular headers*/
-	--huge: clamp(2.6rem, calc(2.6rem + ((1vw - 0.48rem) * 1.3889)), 3.8rem);
-	--h1: clamp(1.8rem, calc(1.8rem + ((1vw - 0.48rem) * 0.9722)), 2.1rem);
-	--h2: clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 0.9722)), 1.8rem);
-	--h3: clamp(1.2rem, calc(1.2rem + ((1vw - 0.48rem) * 0.9722)), 1.5rem);
-	--h4: clamp(1.125rem, calc(1.15rem + ((1vw - 0.48rem) * 0.3472)), 1.2rem);
+	--huge: clamp(3.5rem, calc(2.6rem + ((1vw - 0.48rem) * 1.3889)), 4.8rem);
+	--h1: clamp(1.9rem, calc(1.8rem + ((1vw - 0.48rem) * 0.9722)), 2.2rem);
+	--h2: clamp(1.6rem, calc(1.5rem + ((1vw - 0.48rem) * 0.9722)), 1.9rem);
+	--h3: clamp(1.3rem, calc(1.2rem + ((1vw - 0.48rem) * 0.9722)), 1.6rem);
+	--h4: clamp(1.125rem, calc(1.15rem + ((1vw - 0.48rem) * 0.9722)), 1.3rem);
 	--body: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.1736)), 1.125rem);
 
 	--lh1: 1.3;
@@ -17,10 +17,10 @@
 	--svelte: #cc3300;
 	--secondary800: #14c489;
 	--primary800: #3164ff;
-	--primary400: #3164ff8e;
-	--primary100: #3164ff23;
+	--primary400: #557ef7;
+	--primary100: #8fa9f8;
 	--font: #ffffff;
-	--bg: #121212;
+	--bg: #000000;
 }
 
 * {
@@ -72,20 +72,19 @@ h3 {
 	line-height: var(--lh3);
 }
 h4 {
-	margin-top: 0.8rem;
-	margin-bottom: 0.6rem;
+	font-size: var(--h4);
+	line-height: var(--lh4);
 }
 
 p,
 span,
 a,
 li {
-	font-family: 'Source Sans 3', sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: var(--body);
 	line-height: var(--lhbody);
 	font-weight: 400;
 	word-break: break-word;
-	white-space: pre-wrap;
 }
 
 a {

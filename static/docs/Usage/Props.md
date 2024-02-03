@@ -1,169 +1,83 @@
 # Props
 
-Here are all **Altron** props and their **Default** values:
+The **Altron** entry accommodates several optional props.
 
-#### processEmbedSrcs
+### `ComponentMap`
 
-**Type**: (src: string) => string  
-**Default**: (src: string) => {return src;};
+- **Description:** This prop, as previously discussed, links the component name with its class reference. **Altron** sets it as context.
+- **Type:** Map<string, ComponentType<SvelteComponent\>\>
+- **Default value:** An empty map.
 
-#### excludedBlocks
+### `initialData` 
 
-**Type**: blocks[]  
-**Default**: []
+- **Description:** Used to initialize the editor with data. The initial data must adhere to the **datablock** type, and the provided data undergoes validation to ensure unique IDs.
+- **Type:** dataBlock[]
+- **Default value:** An empty list.
 
-#### attachmentTypes
+### `viewMode` 
 
-**Type**: string  
-**Default**: "\*"
+- **Description:** Specifies whether **Altron** is used for editing or just viewing.
+- **Type:** boolean
+- **Default value:** false
 
-#### acceptedEmbedSrcs
+### `iframeSettings` 
 
-**Type**: string[]  
-**Default**: []
+- **Description:** This prop is an object that specifies the settings for the iframe used in the **embed block**. **Altron** sets it as context.
+- **Type:** [iframeSettingsType](/docs/Usage/Types/#IframeSettings)
+- **Default value:** An empty object.
 
-#### iframeSettings
+### `attachmentTypes` 
 
-**Type**: IframeSettings  
-**Default**: {}
+- **Description:** Restricts the accepted attachments by the **attachment block** to the chosen [mime type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+- **Type:** string
+- **Default value:** "\*"
 
-#### viewMode
+### `acceptedEmbedSrcs` 
 
-**Type**: boolean  
-**Default**: false
+- **Description:** Provides a description of the accepted sources by the embed block and a list of regex rules to match these accepted sources.
+- **Type:** { rules: string[], description: string}
+- **Default value:** { 
+    description: 'You should enter a valid URL for an embed; any source is accepted',
+    rules: [] }
 
-#### headerFont
+### `processEmbedSrcs`
 
-**Type**: string  
-**Default**: 'Verdana, sans-serif'
+- **Description:** A method that processes the accepted source before setting it to the block value.
+- **Type:** (src:string)=>string
+- **Default value:** (src)=>src
 
-#### bodyFont
+### `codeBlockLanguages`  
 
-**Type**: string  
-**Default**: 'Helvetica, sans-serif'
+- **Description:** The list of languages that end-users can choose inside the code block.
+- **Type:** string[]
+- **Default value:** ['javascript', 'java','c','css','plaintext','typescript','python','csharp']
 
-#### primaryColor
+### `Font families`
 
-**Type**: string  
-**Default**: '#3366FF'
+- **Description:** **Altron** expects two font families: one for body-level elements (span, code, li, label, p) and one for headers.
+- **Type:** Both string
+- **Default value:** Body font defaults to **Helvetica, sans-serif**, and headers font defaults to **Verdana, sans-serif**.
 
-#### secondaryColor
+### `Colors` 
 
-**Type**: string  
-**Default**: '#1eeb36'
+- **Description:** **Altron** utilizes five colors: **primaryColor** for the focus state, **secondaryColor** for the editing state, **bgColor** used in the dialog's backdrop, **errorColor** for errors, and  **textColor**.
+- **Type:** All string
+- **Default value:** Primary takes a shade of green **#3366FF**, secondary a shade of blue **#1eeb36**, bgColor takes white, error will default to **#ff3333**, and text color defaults to **#121212**.
 
-#### textColor
+### `Spacing`
 
-**Type**: string  
-**Default**: '#121212'
+- **Description:** You can set the **width** of the editor, the **gap** between blocks, and the four different margins.
+- **Type:** All string
+- **Default value:** Width defaults to **95%**, four margins to **10px**, and the gap also defaults to **10px**.
 
-#### bgColor
+### `Heading Sizes` 
 
-**Type**: string  
-**Default**: '#ffffff'
+- **Description:** Six font size levels can be set: **h1, h2, h3, h4, body,** and **small**. 
+- **Type:** All string
+- **Default value:** A clamp function is used for default values, ranging from 0.875 rem up to 2.1 rem, making the fonts responsive.
 
-#### blocksGap
+### `Margins` 
 
-**Type**: string  
-**Default**: "10px"
-
-#### marginLeft
-
-**Type**: string  
-**Default**: "10px"
-
-#### marginRight
-
-**Type**: string  
-**Default**: "10px"
-
-#### marginTop
-
-**Type**: string  
-**Default**: "10px"
-
-#### marginBottom
-
-**Type**: string  
-**Default**: "10px"
-
-#### width
-
-**Type**: string  
-**Default**: "95%"
-
-#### h1
-
-**Type**: string  
-**Default**: 'clamp(1.8rem, calc(1.8rem + ((1vw - 0.48rem) * 0.9722)), 2.1rem)'
-
-#### h2
-
-**Type**: string  
-**Default**: 'clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 0.9722)), 1.8rem)'
-
-#### h3
-
-**Type**: string  
-**Default**: 'clamp(1.2rem, calc(1.2rem + ((1vw - 0.48rem) * 0.9722)), 1.5rem)'
-
-#### h4
-
-**Type**: string  
-**Default**: 'clamp(1.125rem, calc(1.15rem + ((1vw - 0.48rem) * 0.3472)), 1.2rem)'
-
-#### body
-
-**Type**: string  
-**Default**: 'clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.1736)), 1.125rem)'
-
-#### small
-
-**Type**: string  
-**Default**: 'clamp(0.875rem, calc(0.875rem + ((1vw - 0.48rem) * 0.1736)), 1rem)'
-
-#### lh1
-
-**Type**: string  
-**Default**: '1.3'
-
-#### lh2
-
-**Type**: string  
-**Default**: '1.35'
-
-#### lh3
-
-**Type**: string  
-**Default**: '1.4'
-
-#### lh4
-
-**Type**: string  
-**Default**: '1.5'
-
-#### lbody
-
-**Type**: string  
-**Default**: '1.6'
-
-#### codeBlockLanguages
-
-**Type**: languages[]  
-**Default**: ['javascript', 'java', 'c', 'css', 'plaintext', '**Type**script', 'python', 'csharp']
-
-
-#### Custom components
-
-|Component|Props|
-|---|---|
-|customEmbed|Accepts a **src** prop of **Type** **string** for the embedded view.|
-|customAttachment|Accepts a **file** prop of **Type** **File** and a **title** prop of **Type** **string**.|
-|customImage|Accepts **file** (File), and **caption** (string) props.|
-|customCode|Accepts **text** (string) and **lang** (string) props.|
-|customList|Accepts **items** (array of strings) and **Type** ('ordered' or 'unordered') props.|
-|customHeader|Accepts **text** (string) and **level** (1, 2, 3, or 4) props.|
-|customParagraph|Accepts a **text** prop of **Type** **string** for the paragraph view.|
-|customQuote|Accepts **text** (string) and **owner** (string) props.|
-|customCheckList|Accepts an array of objects with **value** (string) and **checked** (boolean) props.|
-|customMenu|Accepts a **close** prop which is function to close the menu. Set to **null**.|
+- **Description:** You can set five line height levels: **lh1, lh2, lh3, lh4,** and **lbody**. 
+- **Type:** All string
+- **Default value:** They start with 1.3, with **lh1** increasing by 0.5 up to 1.6 **lbody**.

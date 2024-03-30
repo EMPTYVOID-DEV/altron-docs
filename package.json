@@ -32,6 +32,6 @@
 		"@altron/altron": "^2.0.4",
 		"svelte-highlight": "^7.4.1",
 		"svelte-select": "^5.8.3",
-		"sveltedocsmaker": "^0.6.0"
+		"sveltedocsmaker": "^0.6.5"
 	}
 }

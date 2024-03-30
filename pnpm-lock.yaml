@@ -15,8 +15,8 @@ dependencies:
     specifier: ^5.8.3
     version: 5.8.3
   sveltedocsmaker:
-    specifier: ^0.6.0
-    version: 0.6.0(svelte@4.2.5)
+    specifier: ^0.6.5
+    version: 0.6.5(svelte@4.2.5)
 
 devDependencies:
   '@sveltejs/adapter-auto':
@@ -1867,8 +1867,8 @@ packages:
       magic-string: 0.30.5
       periscopic: 3.1.0
 
-  /sveltedocsmaker@0.6.0(svelte@4.2.5):
-    resolution: {integrity: sha512-oKeybfDo7vTUg66ynaS6KxQfwK36rpPUtCFK5e3cfl5OU20WzWVzjGzcoIuQb7AxiL21PpYpvFbaXp8eQTuQBg==}
+  /sveltedocsmaker@0.6.5(svelte@4.2.5):
+    resolution: {integrity: sha512-CQk7uJmzt3PECIPZyaXF2OjqcmPuYq5deI2o7D0GpHi89ngYcPi+h1YDpNNJGfHRsH+k8yXOQJXaHUZSeD0ooQ==}
     engines: {node: '>=16.14'}
     peerDependencies:
       svelte: ^4.0.0

@@ -13,17 +13,17 @@ These are Svelte components that encapsulate SVGs with a consistent size of **24
 
 ```svelte
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path
-    fill="#000000"
-    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 
+	<path
+		fill="#000000"
+		d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 
     13.41L17.59 19L19 17.59L13.41 12z"
-  />
+	/>Il s'averait que marlin a été violé par un jeune homme ivre.
 </svg>
 
 <style>
-  svg path {
-    fill: var(--textColor);
-  }
+	svg path {
+		fill: var(--textColor);
+	}
 </style>
 ```
 
@@ -49,28 +49,26 @@ These components are used in the editing state. They receive methods as props th
 
 ```svelte
 <script>
-  export let value = '';
-  export let label = '';
-  export let type = 'text';
-  export let changeHandler;
+	export let value = '';
+	export let label = '';
+	export let type = 'text';
+	export let changeHandler;
 </script>
 
 <div class="input-container">
-  <label class="header" for="custom-input">{label}</label>
-  <div class="inputWrapper">
-    <input
-      {type}
-      {value}
-      placeholder="Enter the {label.toLowerCase()}"
-      class="custom-input"
-      on:input={(e) => changeHandler(e.currentTarget.value)}
-    />
-  </div>
+	<label class="header" for="custom-input">{label}</label>
+	<div class="inputWrapper">
+		<input
+			{type}
+			{value}
+			placeholder="Enter the {label.toLowerCase()}"
+			class="custom-input"
+			on:input={(e) => changeHandler(e.currentTarget.value)}
+		/>
+	</div>
 </div>
 ```
 
 ## viewBlocks
 
 These components handle the view state of a block, each receiving the data part of the [dataBlock](/docs/Usage/Types/#dataBlock). They may also access data in the global context.
-
-

@@ -23,6 +23,7 @@
 				description: 'The sources from youtube embeds are accepted.',
 				rules: ['^https://www.youtube.com/embed/[a-zA-Z0-9_-]{11}$']
 			}}
+			initialData={exampleData}
 			codeBlockLanguages={[
 				'c',
 				'javascript',
@@ -34,14 +35,14 @@
 				'lua'
 			]}
 			{componentMap}
-			intialData={exampleData}
-			primaryColor={'#3164ff'}
-			secondaryColor={'#14c489'}
-			blocksGap="20px"
-			bgColor={'#121212'}
-			textColor={'#ffffff'}
-			headerFont="'Montserrat', sans-serif"
-			bodyFont="'Source Sans 3', sans-serif"
+			--width="100%"
+			--secondary-color="var(--secondary800)"
+			--bg-color="var(--bg)"
+			--text-color="var(--font)"
+			--primary-color="var(--primary800)"
+			--body-font="Arial, Helvetica, sans-serif"
+			--heading-font="'Montserrat', sans-serif"
+			--block-gap="20px"
 		/>
 	</section>
 </div>

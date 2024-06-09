@@ -16,7 +16,7 @@
 			'Altron',
 			['Introduction', 'Getting started', 'Altron cli', 'Components', 'Import methods', 'What next']
 		],
-		['Usage', ['Props', 'Utils', 'Events', 'Types', 'Consts']]
+		['Usage', ['Props and css variables', 'Utils', 'Events', 'Types', 'Consts']]
 	]);
 </script>
 

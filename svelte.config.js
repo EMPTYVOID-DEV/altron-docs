@@ -20,7 +20,7 @@ const config = {
 				'/docs/Altron/Components',
 				'/docs/Altron/Import methods',
 				'/docs/Altron/What next',
-				'/docs/Usage/Props',
+				'/docs/Usage/Props and css variables',
 				'/docs/Usage/Utils',
 				'/docs/Usage/Types',
 				'/docs/Usage/Events',
